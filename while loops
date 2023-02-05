@@ -1,0 +1,93 @@
+WHILE LOOP TIPS 
+
+- A while loop is a block of code that repeats as long as a condition is true. 
+
+- The block of code does not run if the condition is false.
+
+- The break keyword will end the loops, taking you the the next line after the loop. 
+
+- Warning, if you not include a line of code that will eventually make the condition false the loop will repeat forever. 
+
+There are only so many types of condition you can use, here is a list of the ones I was able to find. 
+
+1. A single value 
+  - true if non-zero (positive or negative) 
+  - false if zero 
+  
+ Ex: while (1) would be a true condition and would cause the loop to repeat
+ Ex: while (0) would be a false condition and would skip the loop 
+ Ex: while (-1) would be a true condition and would cause the loop to repeat 
+ 
+2. An arithmetic expression 
+  - one or more varibles or numbers are used in combination with the *, /, +, and - symbols. 
+  - if their combined values are non-zero(positive or negative) the condition is true and the loop repeats
+  - if their combined values are zero the condition is false and loop is skipped 
+  
+  
+  Ex: while (5 + 5) true 
+  Ex: while (5 - 5) false 
+  Ex: x = 2, y = 2
+      while (x - y) false 
+  Ex: i = 3, j = 3
+      while (i * j) true 
+      
+ 3. Comparisons 
+    - two values are compared and if the comparison is true the loop repeats, if not it's skipped 
+    - Equal ==, Not Equal !=, Greater than >, Greater than or equal =>, Less than <, Less than or equal =>
+    - As long as the comparison is true, the loop repeats 
+    
+    Ex: x = 5, y = 6
+    Ex: while (x == y) false 
+    Ex: while (x != y) true 
+    Ex: while (x < y) true 
+    Ex: while (x > y) false 
+    Ex: while (x => y) false
+    Ex: while (x =< y) true 
+    
+  4. Function return values can be used too  
+    - The int value returned by a functions can be used like any of the value shown above
+    
+    Ex: Let's say that punk_func(x) an int value of 1
+        while (punk_func(x) > 0) true 
+        while (punk_func(x)) true 
+        while (punk_func(x) == 0) false 
+   
+  5. Logical statements
+    - More often than not Logical statements are used with comparisons to make condition
+    - But they can also be used by themselves, in which case there looking for non-zero values for true or zero for false 
+    - And &&, Or ||, Not !, Not equal to !=, Equal to == 
+    
+    Ex: i = 1, j = 1, x = 0, y = 0
+        while (i && j) true 
+        while (i && x) false 
+        while (x && y) false 
+        while (i || j) true 
+        while (i || x) true 
+        while (x || y) false 
+        while (!i) false 
+        while (!x) true 
+        
+    Ex: x = 10, y = 20, z = 30
+        while (y > x && y < z) true 
+        while (y != z && y != x) true 
+        while (z > x || y < z) true 
+        
+   
+  6.  Bitwise comparison 
+    - These makes comparison with the values' bits 
+    - And &, Exclusive or ^, Or |, Shift Left <<, Shift Right >>, Not ~ 
+    - More on these later. 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
