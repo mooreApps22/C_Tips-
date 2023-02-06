@@ -12,16 +12,16 @@ PRINTF FORMAT SPECIFICATIONS
   2. %3d - print as decimal integer 3 characters wide (int) 
      - Ex: printf("%3d", x); 
   
-  3. %f - print as floating point (float) 
+  3. %f - print as floating point (float or double) 
     - Ex: printf("%f", x); 
    
-  4. %.2f - print as floating point and only use 2 places after the decimal point (float) 
+  4. %.2f - print as floating point and only use 2 places after the decimal point (float or double ) 
     - Ex: printf("%.2f", x); 
   
-  5. %6f - print as floating point 6 characters wide (float) 
+  5. %6f - print as floating point 6 characters wide (float or double ) 
     - Ex: printf("%6f", x); 
     
-  6. %10.5f - print as floating point 10 characters wide and 5 places after the decimal point (float) 
+  6. %10.5f - print as floating point 10 characters wide and 5 places after the decimal point (float or double) 
     - Ex: printf("%10.5f", x); 
     
   7. Other print as formats include: 
