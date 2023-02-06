@@ -1,0 +1,34 @@
+PRINTF FORMAT SPECIFICATIONS 
+
+- When you use printf and you want to insert in a variable you use the print as symbol %
+
+- In this context % does not mean percent
+
+- A letter will follow the % symbol to tell the compiler what data type it is 
+
+  1. %d - print as decimal integer (int) 
+     - Ex: printf("%d", x); 
+  
+  2. %3d - print as decimal integer 3 characters wide (int) 
+     - Ex: printf("%3d", x); 
+  
+  3. %f - print as floating point (float) 
+    - Ex: printf("%f", x); 
+   
+  4. %.2f - print as floating point and only use 2 places after the decimal point (float) 
+    - Ex: printf("%.2f", x); 
+  
+  5. %6f - print as floating point 6 characters wide (float) 
+    - Ex: printf("%6f", x); 
+    
+  6. %10.5f - print as floating point 10 characters wide and 5 places after the decimal point (float) 
+    - Ex: printf("%10.5f", x); 
+    
+  7. Other print as formats include: 
+    - %o for octals 
+    - %x for hexidecimal 
+    - %c for characters 
+    - %s for character strings 
+    - %% to use the literal percent sign 
+    
+    
