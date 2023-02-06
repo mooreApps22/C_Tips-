@@ -17,6 +17,10 @@ There are only so many types of condition you can use, here is a list of the one
  Ex: while (1) would be a true condition and would cause the loop to repeat
  Ex: while (0) would be a false condition and would skip the loop 
  Ex: while (-1) would be a true condition and would cause the loop to repeat 
+ Ex: x = 5
+     while (x) would be a true condition and would repeat 
+ Ex: x[1] = 1
+     while (x[1]) would be true 
  
 2. An arithmetic expression 
   - one or more varibles or numbers are used in combination with the *, /, +, and - symbols. 
