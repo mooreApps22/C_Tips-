@@ -4,7 +4,7 @@ WHILE LOOP TIPS
 
 - The block of code does not run if the condition is false.
 
-- The break keyword will end the loops, taking you the the next line after the loop. 
+- The break keyword will end the loop, taking you the the next line after the loop. 
 
 - Warning, if you not include a line of code that will eventually make the condition false the loop will repeat forever. 
 
