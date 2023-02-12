@@ -1,0 +1,15 @@
+POINTERS AND ARRAYS 
+
+- Any operation that can be done by array subscripting can also be done w/ pointers 
+
+Ex: 
+    int a[10];    // declares an array of 10 int values 
+    int *pa;      // pa is a pointer to an int value, yet to be determined 
+    pa = &a[0];   // pa is now a[0]
+    int x = *pa;  // x is now a[0] also 
+    
+- The name of an array is synonymous with the location of the initial element 
+  
+Ex: 
+    pa = &a[0]; // 
+    pa = a; 
