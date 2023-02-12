@@ -1,15 +1,76 @@
 POINTERS AND ARRAYS 
 
-- Any operation that can be done by array subscripting can also be done w/ pointers 
+- Any operation that can be done by array subscripting can also be done w/ pointers
+   
 
 Ex: 
-    int a[10];    // declares an array of 10 int values 
-    int *pa;      // pa is a pointer to an int value, yet to be determined 
-    pa = &a[0];   // pa is now a[0]
-    int x = *pa;  // x is now a[0] also 
+    int a[10];      // declares an array of 10 int values 
+    int *pa;        // pa is a pointer to an int value, yet to be determined 
+    pa = &a[0];     // pa is now points to a[0]
+    int x = *pa;    // x is now a[0] also 
+    x = *(pa + 1);  // x is now a[1]
+    x = *(pa + 3);  // x is now a[4]
+   
+    
     
 - The name of an array is synonymous with the location of the initial element 
   
 Ex: 
-    pa = &a[0]; // 
-    pa = a; 
+    pa = &a[0];     // pa now points to a[0]
+    pa = a;         // pa now points to a[0]
+    *(a+2) = 77;    // a[2] is now 77;
+    int g = 2;      // g is now 2
+    a+5 = g;        // a[5] is now 2 
+    &a[6] = g;      // a[6] is now 2 
+    pa[7] = 6;      // a[7] is now 6
+    *(pa+8) = 99;   // a[8] is now 99 
+    
+- The big difference between array name and a pointer is a variable and an array is NOT  
+    ~ A pointer to the element can be assigned and incremented 
+    ~ An array name can NOT be assigned or incremented 
+    
+ Ex: 
+    pa = a; //legal 
+    pa++;   //legal 
+    a = pa; // illegal 
+    a++;    // illegal 
+    
+- When an array name is pass into a function, it is really passing the 1st element 
+    ~ An array name parameter is a pointer 
+    ~ In other words, a variable containing an address 
+    ~ Below are two examples for comparison 
+    
+  Array Name Ex: 
+        char s[] = "Howdy"         // declares a string of chars 
+  
+        int s_len(char *s) {       // the 1st element of s is passed in 
+            int ct;                // i will be an int 
+            ct = 0;                // i is now 0 
+            while (*s != '\0') {   // repeat while s element is NOT null character 
+                ct++;              // increments ct (character count)
+                s++;               // increments to the next s element 
+            return ct;             // returns ct 
+        }
+        
+        int len = s_len(s);        // len is now 5 
+        
+  Ponter Ex: 
+        char *s = "Howdy"           // declares a string of chars 
+        
+        int s_len(char s[]) {       // the 1st element of s is passed in  
+            int i;                  // i will be an int 
+            i = 0;                  // i is now 0 
+            while (s[i] != '\0')    // repeat while s element is NOT null character 
+                i++;                // increments i 
+            return i;               // return i 
+        }
+        
+        int len = s_len(s);         // len is now 5 
+        
+        
+- It is possible to pass part of an array 
+    ~ f(&a[2]) will only pass the elements are element 2
+        > Parameter declaration would look like: f(int a[]) {...}
+    ~ f(a+2) does the same thing
+        > Parameter declaration would look like: f(int *a) {...} 
+        > The fact that the parameter refers to part of a larger array doesn't matter 
