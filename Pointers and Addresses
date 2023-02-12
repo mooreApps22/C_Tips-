@@ -1,0 +1,96 @@
+Pointers and Addresses 
+
+- A pointer is a variable that cointains the address of a variable 
+  ~ In other words, a pointer is a group of memory cells that can hold an address 
+  ~ An address is the serial number of a memory cell 
+
+- Unary & is called the address-of operator 
+  ~ It gives the address of an object 
+- Unary * is called the dereferencing operator 
+  ~ It gives the object at an address 
+  
+ Ex: 
+    char p = &c; 
+    
+ - This statement assigns the address of c to the variable p 
+    ~ p is said to "point to" c
+    ~ & can only apply to object in memory; variables and array elements 
+    ~ & can NOT apply to expressions, constants, or register variables 
+    
+ Ex: 
+    int x = 1; 
+    int y = 2; 
+    int z[10]; 
+    int *ip;    //ip will point to an int once asigned 
+    
+    ip = &x;    //ip points to x
+    y = *ip;    //y is now 1
+    *ip = 0;    //x is now 0
+    ip = &z[0]; //ip now points to z[0]
+    
+ Another Ex: 
+    double *dp;   //dp will point to an double once asigned 
+    atoi(char *s) //the argument points to the first element of a array of chars
+    
+- A pointer can occur in any context where a variable can 
+
+  Ex: 
+    int x = 0;      // x is now 0
+    int *ip = x&;   // ip points to x
+    *ip += 10;      // x is now 10
+    
+- The value pointed to can be used in an expression with other variables 
+
+  Ex: 
+    int x = 3;    // x is now 3
+    int y = 5;    // y is now 5
+    int *ip = x&; // ip points to x
+    y = *ip + 1;  // y is now 4 
+    *ip += 1;     // x is now 4
+    (*ip)++;      // x is now 5 (the ()'s are needed) 
+    
+- A pointer is variable and can be used without dereferencing (using a *) 
+  ~ If you asign a pointer to a pointer of the same type it'll now point to the same variable 
+  
+  Ex: 
+      int x = 2;    // x is now 2  
+      int y = 8;    // y is now 8
+      int *ip = &x; // ip points to x
+      int *iq = &y; // iq points to y 
+      iq = ip;      // iq now points to x 
+      
+ - C passes arguments to functions by value 
+    ~ The function is only altering a copy of the value 
+    ~ If you want to effect the original value you have to pass the variable w/ & 
+    ~ The address of a variable is a pointer to that variable 
+    
+   WRONG Ex:     
+        void swap(int a, int b) {   // function declared with value copies 
+          int temp;   // temp will be an int 
+          
+          temp = a;   // temp is now a, but only locally
+          a = b;      // a is now b, but only locally 
+          b = temp;   // b is now a, but only locally 
+        }
+        
+        int x = 6;    // x is now 6 
+        int y = 9;    // y is now 9 
+        swap(x, y);   // x is still 6 and y is still 9 
+        
+  RIGHT Ex: 
+        void swap(int *px, int *py) { // function declared with pointers arguments 
+          int temp;     //temp will be an int 
+          
+          temp = *px;   //temp is now what px points to 
+          *px = *py;    // px now points to py
+          *py = temp;   // py now points to px 
+        }
+        
+        int x = 6;      // x is now 6
+        int y = 9;      // y is now 9 
+        swap(&x, &y);   // x is now 9 and y is now 6 
+        
+  
+    
+    
+    
