@@ -6,7 +6,7 @@ POINTERS AND ARRAYS
 Ex: 
     int a[10];      // declares an array of 10 int values 
     int *pa;        // pa is a pointer to an int value, yet to be determined 
-    pa = &a[0];     // pa is now points to a[0]
+    *pa = &a[0];     // pa is now points to a[0]
     int x = *pa;    // x is now a[0] also 
     x = *(pa + 1);  // x is now a[1]
     x = *(pa + 3);  // x is now a[4]
@@ -33,7 +33,7 @@ Ex:
     pa = a; //legal 
     pa++;   //legal 
     a = pa; // illegal 
-    a++;    // illegal 
+    a++;    // in a loop this will take you to the next element, but it won't increment a value 
     
 - When an array name is pass into a function, it is really passing the 1st element 
     ~ An array name parameter is a pointer 
