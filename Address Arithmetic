@@ -32,8 +32,10 @@ ADDRESS ARITHMETIC
     ptr = ptr - 2; // move the pointer two positions back
 
   Ex: 
-    int arr[5] = {1, 2, 3, 4, 5};
-    int *ptr1 = &arr[0];
-    int *ptr2 = &arr[4];
-
-    int distance = ptr2 - ptr1; // distance is 4
+    int arr[5] = {10, 20, 30, 40, 50};    // arr is an array of 5 elements 
+    int *ptr1 = &arr[0];                  // ptr2 points to element 0 
+    int *ptr2 = &arr[4];                  // ptr1 points to element 4
+    int d = ptr2 - ptr1;                  // d is now 4
+    int e = *ptr2 - *ptr0;                // e is now 40 
+    
+    
