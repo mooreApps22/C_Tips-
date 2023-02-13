@@ -38,4 +38,11 @@ ADDRESS ARITHMETIC
     int d = ptr2 - ptr1;                  // d is now 4
     int e = *ptr2 - *ptr0;                // e is now 40 
     
+  Ex: 
+      int s_len(char *s) {        // func declaration 
+        char *p = s;              // p points to the array name(1st element) 
+        while (*p != '\0')        // sets up a loop which iterates through s 
+          p++;                    // goes to the next element 
+        return p - s;             // subtracts the last element from the first element 
+      }
     
