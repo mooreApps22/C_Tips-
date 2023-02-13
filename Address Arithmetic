@@ -1,0 +1,39 @@
+ADDRESS ARITHMETIC 
+
+- Address Arithmetic are arithmetic operations that can be performed on pointers
+- Two of the most basic operations include: 
+  ~ If p is a pointer to some element, then p++ points to the next element 
+  ~ And p+= i would move i elements from where it currently is 
+  
+ 
+ Ex: 
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *ptr = &arr[0];
+
+    ptr++; // move the pointer to the next integer
+
+  Ex: 
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *ptr = &arr[4];
+
+    ptr--; // move the pointer to the previous integer
+
+  Ex:  
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *ptr = &arr[0];
+
+    ptr = ptr + 2; // move the pointer two positions ahead
+
+
+  Ex:
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *ptr = &arr[4];
+
+    ptr = ptr - 2; // move the pointer two positions back
+
+  Ex: 
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *ptr1 = &arr[0];
+    int *ptr2 = &arr[4];
+
+    int distance = ptr2 - ptr1; // distance is 4
