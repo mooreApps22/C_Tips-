@@ -42,3 +42,5 @@
               og++;                           // og pointer now pointers to the next element 
             }
         }
+        
+        
