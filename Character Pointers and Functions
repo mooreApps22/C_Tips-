@@ -1,0 +1,44 @@
+- A string constant is an array of characters 
+  ~ Strings are terminated with the null character '\0'
+  ~ The null character means the length of storage is always the number of characters plus one
+  ~ The null character is how the program knows where the end of the array 
+  ~ String constants use double quotes (") and characters constants use single quotes (') 
+    > It is possible to have a string with only one element "?" 
+
+  Ex: 
+      "All the small things"      // 20 characters long plus one null character 
+      
+- The most common function that passes strings is the printf() 
+  ~ C does not provide any operators for processing an entire string of characters as a unit 
+  ~ C uses pointers to pass around strings
+  
+  
+  Ex: 
+      printf("hello, world");     // the 1st element is pointed to 
+      char *pc;                   // a char pointer
+      pc = "hahaha";              // pc points to 'h' 
+      char str[] = "Ho Ho Ho!";   // str is an array 
+      char *pstr = "Ho Ho Ho!";   // pstr points to 'H' 
+      
+- There is a big difference between an array and a pointer 
+  ~ An array is just big enough to hold the sequence of chars and null that initializes it
+  ~ The chars can be changed but the storage remains the same 
+  ~ a pointer points to a string 
+  ~ It can be changed to point somewhere else 
+  ~ The pointer cannot modified the strings contents 
+
+    Array Ex: 
+        void str_cpy(char *cpy, char *og) {   // pass in both array names 
+          int i;                              // i is initialized 
+          i = 0;                              // i is now 0
+          while ((cpy[i] = og[i]) != '\0')    // cpy[i] is og[i] until the null is reached  
+            i++;                              // i is incremented 
+        }
+
+    Pointer Ex: 
+        void str_cpy(char *cpy, char *og) {   // pass in both array names 
+            while ((*cpy = *og) != '\0') {    // cpy pointer is og pointer until null is reached
+              cpy++;                          // cpy pointer now points to the next element 
+              og++;                           // og pointer now pointers to the next element 
+            }
+        }
