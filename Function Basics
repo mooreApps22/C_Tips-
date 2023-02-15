@@ -1,0 +1,33 @@
+- A function a block of code that executes a set of statements
+  ~ The main appeal of a function is to save you from repeating yourself repeatedly 
+  ~ Synonyms for function you may find in different contexts:
+      > Routine, Subroutine, Procedure, Method, Callable, Subprogram, Operation 
+      > Functionality, Block, Lambda, Handler
+      
+  Ex: 
+      int str_len(char *str)  // return type, name, arguments
+      {                       // left bracket 
+          int i;              // a local initialization 
+          i = 0;              // a value set 
+          while (*str++)      // while loops with an incremented string pointer 
+            i++;              // an incremented int 
+          return i;           // return statement 
+      }                       // right bracket 
+      
+      
+ - Function feature
+  ~ There has to be a return type, even if you don't want to return anything 
+    > If there is nothing to return, the return is void, in which case there would be no return statement 
+    > If there is a type to return, state the type before the function name
+  ~ The function name is what you use to call it later in the program 
+    > Make sure the name clear implies what the function is meant to do 
+  ~ Function names are followed by ()'s which contain parameter types and parameter names 
+    > Parameter types are just the type of parameter the function takes
+    > Parameter name are basically variables names for what is passed into the function 
+    > You can have zero or as many parameters as you what 
+  ~ The brackets are what contain all the statements that the function is meant to call 
+    > There are two ways to end a function 
+      - The compiler reads a return statment 
+      - The compiler reads the right bracket 
+    
+  
