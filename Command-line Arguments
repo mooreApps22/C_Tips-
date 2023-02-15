@@ -1,0 +1,26 @@
+- Main is called with two arguments
+  ~ The first argument is an int conventionally called argc (for argument count)
+  ~ The second argument is a char pointer called argv (for argument vector)
+- argc is the number of command line arguments excuted with the program 
+- argv is a pointer to an array of character strings that contain the arguments 
+   ~ One per string 
+- argv[0] is the name of the program 
+   ~ So, argv[1] would pointer to the first string you pass into the command line 
+   ~ The first optional argument is argv[1]
+   ~ The last optional argument is argv[argc-1]
+   ~ argv[argc] is a null pointer 
+- argc 1 refers to argv[0]
+    ~ So argc would be 2 if you only passed one string when you execute the program 
+
+  Ex: 
+    #include <stdio.h>                 
+    main(int argc, char *argv[]) {      
+      int i; 
+      i = 1; 
+      while (i < argc) {
+        printf("%s%s", argv[i], (i < argc-1) ? " " : ""); 
+        i++; 
+      }
+      printf("\n"); 
+      return 0; 
+    }
