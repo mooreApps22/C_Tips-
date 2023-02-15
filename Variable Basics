@@ -1,0 +1,18 @@
+VARIABLE BASICS 
+
+- A variable is a named memory locations that store a value
+- A variable has multible parts
+
+  Ex: 
+      int x; // type and name declaration 
+      x = 1; // value assignment 
+      
+- The types tells the compiler what type of data you are using
+   ~ Different types uses differnt amounts of bytes 
+- The name is what you call when you want to use it in statements 
+- The value is the meaningful data, that will be used in the program 
+- The equal sign is the NOT an equal sign in this context
+  ~ It means x has been assigned the value of 1
+  
+  
+      
