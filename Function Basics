@@ -31,3 +31,9 @@
       - The compiler reads the right bracket 
     
   
+- Functions can be used just like varibles
+  > A function can have many statements, but the return statement is what ultimately is to be passed around  
+  
+  
+  
+  
