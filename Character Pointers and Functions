@@ -1,9 +1,9 @@
 - A string constant is an array of characters 
   ~ Strings are terminated with the null character '\0'
-  ~ The null character means the length of storage is always the number of characters plus one
-  ~ The null character is how the program knows where the end of the array 
+  ~ The null character add one to the length of storage
+  ~ The null character is how the program knows where the end of the array is
   ~ String constants use double quotes (") and characters constants use single quotes (') 
-    > It is possible to have a string with only one element "?" 
+    > It is possible to have a string with only one element "?" Answer: Yes it is
 
   Ex: 
       "All the small things"      // 20 characters long plus one null character 
@@ -16,7 +16,7 @@
   Ex: 
       printf("hello, world");     // the 1st element is pointed to 
       char *pc;                   // a char pointer
-      pc = "hahaha";              // pc points to 'h' 
+      pc = "hahaha";              // pc points to the first 'h' 
       char str[] = "Ho Ho Ho!";   // str is an array 
       char *pstr = "Ho Ho Ho!";   // pstr points to 'H' 
       
