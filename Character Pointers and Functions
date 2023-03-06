@@ -1,6 +1,6 @@
 - A string constant is an array of characters 
   ~ Strings are terminated with the null character '\0'
-  ~ The null character add one to the length of storage
+  ~ The null character adds one to the length of storage
   ~ The null character is how the program knows where the end of the array is
   ~ String constants use double quotes (") and characters constants use single quotes (') 
     > It is possible to have a string with only one element "?" Answer: Yes it is
