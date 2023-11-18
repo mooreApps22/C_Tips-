@@ -58,7 +58,7 @@ There are only so many types of condition you can use, here is a list of the one
    
   5. Logical statements
     - More often than not Logical statements are used with comparisons to make condition
-    - But they can also be used by themselves, in which case there looking for non-zero values for true or zero for false 
+    - But they can also be used by themselves, in which case its looking for non-zero values for true or zero for false 
     - And &&, Or ||, Not !, Not equal to !=, Equal to == 
     
     Ex: i = 1, j = 1, x = 0, y = 0
